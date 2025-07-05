@@ -1,0 +1,68 @@
+/* Reset básico y box-sizing universal */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tipografía base y fondo */
+html {
+    background-color: #f1f5f9; /* gris claro agradable */
+    font-family: system-ui, sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+/* Cuerpo del contenido */
+body {
+    max-width: 80ch;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    line-height: 1.6;
+  color: #1e293b; /* slate-800 (oscuro suave) */
+    background-color: white;
+}
+
+/* Encabezados */
+h1 {
+  color: #6b21a8; /* purple-800 */
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: #334155; /* slate-700 */
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Texto y párrafos */
+p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    color: #374151; /* slate-700 */
+}
+
+/* Listas */
+ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Enlaces */
+a {
+    color: #2563eb; /* blue-600 */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
