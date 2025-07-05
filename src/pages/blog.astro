@@ -1,6 +1,7 @@
 ---
+import Navigation from '../components/navigation.astro';
 import '../styles/global.css'
-import '../styles/nav.css'
+import '../styles/navigation.css'
 
 //Informacion sobre page
 const pageTitle = "Blog del Dev";
@@ -16,8 +17,6 @@ const titlePost_2 = "Cómo uso IA en mis proyectos";
 const textPost_2 = "Explico un poco el uso de la IA y cuento mi experiencia trabajando con élla.";
 ---
 
-
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -28,9 +27,7 @@ const textPost_2 = "Explico un poco el uso de la IA y cuento mi experiencia trab
 	</head>
 	<body>
 		<nav>
-			<a href="/">Home</a>
-			<a href="/about/">Sobre mí</a>
-			<a href="/blog/">Blog</a>
+			<Navigation />
 		</nav>
 
 		<h1>{pageTitle}</h1>
