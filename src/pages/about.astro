@@ -1,10 +1,35 @@
+---
+import '../styles/global.css'
+import '../styles/nav.css'
+
+//informacion de page
+const pageTitle = "Sobre mi";
+const pageBlog = "Blog Dev";
+const titleSkills = "Conocimientos"; 
+const skills = ["HTML", "C++(favorito)", "typescript", "express", "React", "postgres(supabase)", "python","Diseño minimalista, enfoque en privacidad y experiencia de usuario"];
+const descPage = "Soy estudiante de Ingeniería en Computación originario de Guadalajara, Jalisco, México. Tengo 20 años y descubrí mi pasión por la programación a los 17. Aunque mi lenguaje favorito es C++, no estoy casado con ningún lenguaje: me interesa aprender lo necesario para construir soluciones reales, útiles y bien hechas,Me interesa la inteligencia artificial, el desarrollo de software libre y el diseño de herramientas que respeten la privacidad. Actualmente estoy aprendiendo a usar Astro como parte de mi formación autodidacta. Disfruto estudiar temas académicos como literatura, historia y ciencia; y me gustaría continuar mi camino académico con una maestría y un doctorado,En mi tiempo libre, me gusta leer, jugar videojuegos y trabajar en proyectos personales que mezclan tecnología y creatividad.";
+
+//variables para css
+const skillColor = "navy";
+---
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Blog Dev</title>
+		<title>{pageBlog}</title>
+		<style define:vars={{ skillColor }}>
+		
+
+		.skill {
+			color: var(--skillColor);
+			font-weight: 500;
+			margin-bottom: 0.25rem;
+		}
+</style>
+
 	</head>
 	<body>
 		
@@ -13,25 +38,12 @@
 			<a href="/about/">Sobre mí</a>
 			<a href="/blog/">Blog</a>
 		</nav>
-			<h1>Sobre mí</h1>
-				<p>
-					Soy estudiante de Ingeniería en Computación originario de Guadalajara, Jalisco, México. Tengo 20 años y descubrí mi pasión por la programación a los 17. Aunque mi lenguaje favorito es C++, no estoy casado con ningún lenguaje: me interesa aprender lo necesario para construir soluciones reales, útiles y bien hechas.
-				</p>
-				<p>
-					Me interesa la inteligencia artificial, el desarrollo de software libre y el diseño de herramientas que respeten la privacidad. Actualmente estoy aprendiendo a usar Astro como parte de mi formación autodidacta. Disfruto estudiar temas académicos como literatura, historia y ciencia; y me gustaría continuar mi camino académico con una maestría y un doctorado.
-				</p>
-				<p>
-					En mi tiempo libre, me gusta leer, jugar videojuegos y trabajar en proyectos personales que mezclan tecnología y creatividad.
-				</p>
+			<h1>{pageTitle}</h1>
+				<p>{descPage}</p>
 		<section>
-			<h2>Habilidades</h2>
+			<h2>{titleSkills}</h2>
 				<ul>
-					<li>C++ (favorito)</li>
-					<li>JavaScript / TypeScript</li>
-					<li>Node.js, Express</li>
-					<li>HTML, CSS, Tailwind</li>
-					<li>Supabase</li>
-					<li>Diseño minimalista, enfoque en privacidad y experiencia de usuario</li>
+					{skills.map((skill) => <li class="skill">{skill}</li>)}
 				</ul>
 		</section>
 	</body>

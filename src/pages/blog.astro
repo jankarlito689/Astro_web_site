@@ -1,10 +1,30 @@
+---
+import '../styles/global.css'
+import '../styles/nav.css'
+
+//Informacion sobre page
+const pageTitle = "Blog del Dev";
+const pageTitleBlog = "Blog Dev";
+const descPage = "Post sobre mí como desarrollador, pasiones y cosas que me gustan";
+
+//informacion post-1
+const titlePost_1 = "Cómo uso Supabase en mis proyectos";
+const textPost_1 = "Explico un poco el uso de Supabase y cuento mi experiencia trabajando con él.";
+
+//informacion post-2
+const titlePost_2 = "Cómo uso IA en mis proyectos";
+const textPost_2 = "Explico un poco el uso de la IA y cuento mi experiencia trabajando con élla.";
+---
+
+
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Blog Dev</title>
+		<title>{pageTitleBlog}</title>
 	</head>
 	<body>
 		<nav>
@@ -13,19 +33,19 @@
 			<a href="/blog/">Blog</a>
 		</nav>
 
-		<h1>Blog del Dev</h1>
-		<h2>Post sobre mí como desarrollador, pasiones y cosas que me gustan</h2>
+		<h1>{pageTitle}</h1>
+		<h2>{descPage}</h2>
 
 		<section>
-			<h3>Cómo uso Supabase en mis proyectos</h3>
-			<p>Explico un poco el uso de Supabase y cuento mi experiencia trabajando con él.</p>
+			<h3>{titlePost_1}</h3>
+			<p>{textPost_1}</p>
 			<ul>
 				<li><a href="/posts/post-1">Uso de Supabase</a></li>
 			</ul>
 		</section>
 		<section>
-			<h3>Cómo uso IA en mis proyectos</h3>
-			<p>Explico un poco el uso de la IA y cuento mi experiencia trabajando con élla.</p>
+			<h3>{titlePost_2}</h3>
+			<p>{textPost_2}</p>
 			<ul>
 				<li><a href="/posts/post-2">Uso de la IA</a></li>
 			</ul>
