@@ -1,7 +1,8 @@
 ---
-import '../styles/global.css'
-import '../styles/navigation.css'
+import '../styles/global.css';
+import '../styles/navigation.css';
 import Navigation from '../components/navigation.astro';
+import Footer from '../components/footer.astro';
 ---
 <html lang="en">
 	<head>
@@ -49,10 +50,15 @@ import Navigation from '../components/navigation.astro';
 		<section>
 			<h2>Contacto</h2>
 				<p>¿Quieres contactarme? Puedes escribirme por correo o seguirme en GitHub.</p>
-					<ul>
-						<li>Email: cesarleos@ejemplo.com</li>
-						<li>GitHub: <a href="https://github.com/jankarlito689" target="_blank">github.com/jankarlito689</a></li>
-					</ul>
+					<p>
+						<a href="https://github.com/jankarlito689" target="_blank">GitHub</a> |
+						<a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a> |
+						<a href="mailto:jankarli69@outlook.com">Email</a>
+					</p>
 		</section>
+		<footer>
+			<Footer />
+		</footer>
+		
 	</body>
 </html>

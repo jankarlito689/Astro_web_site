@@ -2,6 +2,8 @@
 import '../styles/global.css';
 import '../styles/navigation.css';
 import Navigation from '../components/navigation.astro';
+import Footer from '../components/footer.astro';
+
 
 //informacion de page
 const pageTitle = "Sobre mi";
@@ -21,15 +23,6 @@ const skillColor = "navy";
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageBlog}</title>
-		<style define:vars={{ skillColor }}>
-		
-
-		.skill {
-			color: var(--skillColor);
-			font-weight: 500;
-			margin-bottom: 0.25rem;
-		}
-		</style>
 	</head>
 	<body>
 		<nav>
@@ -41,8 +34,11 @@ const skillColor = "navy";
 		<section>
 			<h2>{titleSkills}</h2>
 				<ul>
-					{skills.map((skill) => <li class="skill">{skill}</li>)}
+					{skills.map((skill) => <li>{skill}</li>)}
 				</ul>
 		</section>
+		<footer>
+			<Footer />
+		</footer>
 	</body>
 </html>
