@@ -9,47 +9,64 @@
 
 /* Tipografía base y fondo */
 html {
-    background-color: #f1f5f9; /* gris claro agradable */
-    font-family: system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
     font-size: 16px;
     scroll-behavior: smooth;
+    background-color: #ECDFCC; /* crema claro */
+    color: #3C3D37;
 }
 
-/* Cuerpo del contenido */
 body {
-    max-width: 80ch;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    line-height: 1.6;
-  color: #1e293b; /* slate-800 (oscuro suave) */
-    background-color: white;
+    margin: 0;
+    padding: 4rem 2rem;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+/* Secciones con espacio */
+section {
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
 }
 
 /* Encabezados */
+h1, h2, h3 {
+    font-weight: 600;
+    color: #3C3D37;
+}
+
 h1 {
-  color: #6b21a8; /* purple-800 */
-    font-size: 2.75rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 h2 {
-    color: #334155; /* slate-700 */
     font-size: 2rem;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
+    color: #181C14;
 }
 
-/* Texto y párrafos */
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #697565;
+}
+
+/* Párrafos */
 p {
     font-size: 1.125rem;
     margin-bottom: 1.5rem;
-    color: #374151; /* slate-700 */
+    color: #3C3D37;
 }
 
 /* Listas */
 ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
+    list-style: disc;
+    padding-left: 2rem;
     margin-bottom: 1.5rem;
 }
 
@@ -59,10 +76,11 @@ li {
 
 /* Enlaces */
 a {
-    color: #2563eb; /* blue-600 */
-    text-decoration: none;
+    color: #697565;
+    text-decoration: underline;
+    transition: color 0.3s;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #181C14;
 }
