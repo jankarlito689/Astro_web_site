@@ -3,6 +3,7 @@ import '../styles/global.css';
 import '../styles/navigation.css';
 import Navigation from '../components/navigation.astro';
 import Footer from '../components/footer.astro';
+import Social from '../components/social.astro';
 ---
 <html lang="en">
 	<head>
@@ -51,14 +52,13 @@ import Footer from '../components/footer.astro';
 			<h2>Contacto</h2>
 				<p>¿Quieres contactarme? Puedes escribirme por correo o seguirme en GitHub.</p>
 					<p>
-						<a href="https://github.com/jankarlito689" target="_blank">GitHub</a> |
-						<a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a> |
-						<a href="mailto:jankarli69@outlook.com">Email</a>
+						<Social platform = "Github" username ="jankarlito689"/>
+						<Social platform = "LinkedIn" username ="cesardevelop"/>
+						<Social platform = "Email" username ="jankarli69@outlook.com"/>
 					</p>
 		</section>
-		<footer>
-			<Footer />
-		</footer>
-		
 	</body>
+	<footer>
+		<Footer />
+	</footer>
 </html>
