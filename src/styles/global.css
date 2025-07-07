@@ -19,12 +19,14 @@ html {
 body {
     margin: 0;
     padding: 4rem 2rem;
-    max-width: 960px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.7;
 }
-
+html, body{
+    height: 100%;
+}
 /* Secciones con espacio */
 section {
     margin-bottom: 4rem;
