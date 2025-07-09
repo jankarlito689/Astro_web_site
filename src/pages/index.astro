@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import '../styles/navigation.css';
-import Navigation from '../components/navigation.astro';
+import Header from '../components/header.astro';
 import Footer from '../components/footer.astro';
 import Social from '../components/social.astro';
 ---
@@ -14,9 +14,7 @@ import Social from '../components/social.astro';
 		<title>Blog Dev</title>
 	</head>
 	<body>
-		<nav>
-			<Navigation />
-		</nav>
+		<Header />
 		<section>
 			<h1>Hola, soy César Leos</h1>
 				<p>
@@ -57,8 +55,11 @@ import Social from '../components/social.astro';
 						<Social platform = "Email" username ="jankarli69@outlook.com"/>
 					</p>
 		</section>
+		<footer>
+			<Footer />
+		</footer>
+		<script>
+			import '../scripts/menu';
+		</script>
 	</body>
-	<footer>
-		<Footer />
-	</footer>
 </html>

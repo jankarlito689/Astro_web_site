@@ -1,6 +1,6 @@
 ---
-import Navigation from '../components/navigation.astro';
 import Footer from '../components/footer.astro';
+import Header from '../components/header.astro';
 import '../styles/global.css';
 import '../styles/navigation.css';
 
@@ -27,12 +27,9 @@ const textPost_2 = "Explico un poco el uso de la IA y cuento mi experiencia trab
 		<title>{pageTitleBlog}</title>
 	</head>
 	<body>
-		<nav>
-			<Navigation />
-		</nav>
-
+		<Header />
 		<h1>{pageTitle}</h1>
-		<h2>{descPage}</h2>
+			<h2>{descPage}</h2>
 
 		<section>
 			<h3>{titlePost_1}</h3>
@@ -51,5 +48,8 @@ const textPost_2 = "Explico un poco el uso de la IA y cuento mi experiencia trab
 		<footer>
 			<Footer />
 		</footer>
+		<script>
+			import '../scripts/menu';
+		</script>
 	</body>
 </html>

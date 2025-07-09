@@ -1,8 +1,8 @@
 ---
 import '../styles/global.css';
 import '../styles/navigation.css';
-import Navigation from '../components/navigation.astro';
 import Footer from '../components/footer.astro';
+import Header from '../components/header.astro';
 
 
 //informacion de page
@@ -22,12 +22,9 @@ const descPage = "Soy estudiante de Ingeniería en Computación originario de Gu
 		<title>{pageBlog}</title>
 	</head>
 	<body>
-		<nav>
-			<Navigation />
-		</nav>
-		
-			<h1>{pageTitle}</h1>
-				<p>{descPage}</p>
+		<Header />
+		<h1>{pageTitle}</h1>
+			<p>{descPage}</p>
 		<section>
 			<h2>{titleSkills}</h2>
 				<ul>
@@ -37,5 +34,8 @@ const descPage = "Soy estudiante de Ingeniería en Computación originario de Gu
 		<footer>
 			<Footer />
 		</footer>
+		<script>
+			import '../scripts/menu';
+		</script>
 	</body>
 </html>
