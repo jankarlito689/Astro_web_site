@@ -1,9 +1,20 @@
+/* Estilos base */
 nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
 	margin-bottom: 2rem;
+	padding: 1rem 2rem;
+}
+
+/* Contenedor de los enlaces */
+nav .nav-links {
 	display: flex;
 	gap: 1rem;
 }
 
+/* Enlaces */
 nav a {
 	text-decoration: none;
 	color: #333;
@@ -15,4 +26,37 @@ nav a {
 
 nav a:hover {
 	background-color: #eee;
+}
+
+/* Botón hamburguesa */
+.burger {
+	display: none;
+	cursor: pointer;
+}
+
+.burger .line {
+	display: block;
+	width: 2rem;
+	height: 0.2rem;
+	margin: 0.4rem 0;
+	background-color: #ff9776;
+	border-radius: 2px;
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+	nav .nav-links {
+		display: none;
+		flex-direction: column;
+		width: 100%;
+		margin-top: 1rem;
+	}
+
+	nav .nav-links.active {
+		display: flex;
+	}
+
+	.burger {
+		display: block;
+	}
 }
