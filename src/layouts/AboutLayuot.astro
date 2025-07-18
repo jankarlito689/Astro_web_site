@@ -4,16 +4,68 @@ import '../styles/navigation.css';
 import Footer from '../components/footer.astro';
 import Header from '../components/header.astro';
 
-
-//informacion de page
-const pageTitle = "Sobre mi";
+//información de la página
+const pageTitle = "Sobre mí";
 const pageBlog = "Blog Dev";
+
 const titleSkills = "Conocimientos"; 
-const skills = ["HTML", "C++(favorito)", "typescript", "express", "React", "postgres(supabase)", "python","Diseño minimalista, enfoque en privacidad y experiencia de usuario"];
-const descPage = "Soy estudiante de Ingeniería en Computación originario de Guadalajara, Jalisco, México. Tengo 20 años y descubrí mi pasión por la programación a los 17. Aunque mi lenguaje favorito es C++, no estoy casado con ningún lenguaje: me interesa aprender lo necesario para construir soluciones reales, útiles y bien hechas,Me interesa la inteligencia artificial, el desarrollo de software libre y el diseño de herramientas que respeten la privacidad. Actualmente estoy aprendiendo a usar Astro como parte de mi formación autodidacta. Disfruto estudiar temas académicos como literatura, historia y ciencia; y me gustaría continuar mi camino académico con una maestría y un doctorado,En mi tiempo libre, me gusta leer, jugar videojuegos y trabajar en proyectos personales que mezclan tecnología y creatividad.";
+const skills = [
+	"HTML", "C++ (favorito)", "TypeScript", "Express",
+	"React", "PostgreSQL (Supabase)", "Python",
+	"Diseño minimalista, enfoque en privacidad y experiencia de usuario"
+];
+
+const profile = `Soy desarrollador de software con enfoque en desarrollo móvil y backend, apasionado por construir soluciones funcionales, estéticas y orientadas a la privacidad. He trabajado con tecnologías como C# .NET, MAUI, React, React Native, Supabase, PostgreSQL y Express, además de diseño y desarrollo web con HTML, CSS, JavaScript y TypeScript.
+
+Me interesa la inteligencia artificial, el desarrollo de herramientas libres y minimalistas, y la creación de software centrado en el usuario. Disfruto aprender de forma autodidacta y actualmente me estoy formando en Astro como parte de mi stack web.
+
+Más allá de lo técnico, tengo un profundo interés por temas académicos como la literatura, la historia y la ciencia. Aspiro a continuar mi formación profesional con estudios de posgrado (maestría y doctorado), siempre buscando integrar la tecnología con el conocimiento interdisciplinario.
+
+En mi tiempo libre, me gusta leer, jugar videojuegos y trabajar en proyectos personales que mezclan tecnología y creatividad. Este equilibrio entre lo técnico y lo humano es lo que define mi forma de pensar, aprender y construir.`;
+
+const universityProjects = [
+	"Desarrollo de software en C y C++.",
+	"Especialización en aplicaciones móviles con .NET MAUI.",
+	"Diseño y gestión de bases de datos PostgreSQL usando Supabase."
+];
+
+const personalProjects = [
+	"Desarrollo de sitios web con HTML, CSS, JavaScript, TypeScript, Astro y WordPress.",
+	"Creación de APIs para integrar frontends y aplicaciones móviles con backend.",
+	"Desarrollo de software de escritorio usando C++ y Qt (ejemplo: sistema bibliotecario)."
+];
+
+const relevantExperience = [
+	"Participación en proyectos web con React y JavaScript, creando aplicaciones dinámicas e interactivas.",
+	"Trabajo en equipo con metodologías ágiles, aplicando buenas prácticas de desarrollo.",
+	"Documentación, pruebas y mantenimiento de proyectos en los que he colaborado."
+];
+
+const techStack = [
+	"C# (.NET, MAUI)",
+	"C++ (Qt)",
+	"JavaScript / TypeScript",
+	"React / React Native",
+	"Express.js",
+	"HTML5 / CSS3",
+	"WordPress",
+	"PostgreSQL / Supabase",
+	"PostgREST"
+];
+
+const tools = [
+	"Visual Studio",
+	"Visual Studio Code",
+	"Git & GitHub",
+	"Supabase Studio"
+];
+
+const languages = ["Español (nativo)", "Inglés (intermedio)"];
+
+
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -23,17 +75,68 @@ const descPage = "Soy estudiante de Ingeniería en Computación originario de Gu
 	</head>
 	<body>
 		<Header />
-		<h1>{pageTitle}</h1>
-			<p>{descPage}</p>
-		<section>
-			<h2>{titleSkills}</h2>
+
+		<main>
+			<h1>{pageTitle}</h1>
+
+			<p>{profile}</p>
+
+			<section>
+				<h2>{titleSkills}</h2>
 				<ul>
 					{skills.map((skill) => <li>{skill}</li>)}
 				</ul>
-		</section>
+			</section>
+
+			<section>
+				<h2>Proyectos Universitarios</h2>
+				<ul>
+					{universityProjects.map((item) => <li>{item}</li>)}
+				</ul>
+			</section>
+
+			<section>
+				<h2>Proyectos Personales</h2>
+				<ul>
+					{personalProjects.map((item) => <li>{item}</li>)}
+				</ul>
+			</section>
+
+			<section>
+				<h2>Experiencia Relevante</h2>
+				<ul>
+					{relevantExperience.map((item) => <li>{item}</li>)}
+				</ul>
+			</section>
+
+			<section>
+				<h2>Tech Stack</h2>
+				<ul>
+					{techStack.map((tech) => <li>{tech}</li>)}
+				</ul>
+			</section>
+
+			<section>
+				<h2>Herramientas</h2>
+				<ul>
+					{tools.map((tool) => <li>{tool}</li>)}
+				</ul>
+			</section>
+
+			<section>
+				<h2>Idiomas</h2>
+				<ul>
+					{languages.map((lang) => <li>{lang}</li>)}
+				</ul>
+			</section>
+
+
+		</main>
+
 		<footer>
 			<Footer />
 		</footer>
+
 		<script>
 			import '../scripts/menu';
 		</script>
