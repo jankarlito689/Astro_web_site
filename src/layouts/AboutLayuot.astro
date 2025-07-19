@@ -3,6 +3,7 @@ import '../styles/global.css';
 import '../styles/navigation.css';
 import Footer from '../components/footer.astro';
 import Header from '../components/header.astro';
+import SectionList from '../components/section.astro';
 
 //información de la página
 const pageTitle = "Sobre mí";
@@ -81,56 +82,12 @@ const languages = ["Español (nativo)", "Inglés (intermedio)"];
 
 			<p>{profile}</p>
 
-			<section>
-				<h2>{titleSkills}</h2>
-				<ul>
-					{skills.map((skill) => <li>{skill}</li>)}
-				</ul>
-			</section>
-
-			<section>
-				<h2>Proyectos Universitarios</h2>
-				<ul>
-					{universityProjects.map((item) => <li>{item}</li>)}
-				</ul>
-			</section>
-
-			<section>
-				<h2>Proyectos Personales</h2>
-				<ul>
-					{personalProjects.map((item) => <li>{item}</li>)}
-				</ul>
-			</section>
-
-			<section>
-				<h2>Experiencia Relevante</h2>
-				<ul>
-					{relevantExperience.map((item) => <li>{item}</li>)}
-				</ul>
-			</section>
-
-			<section>
-				<h2>Tech Stack</h2>
-				<ul>
-					{techStack.map((tech) => <li>{tech}</li>)}
-				</ul>
-			</section>
-
-			<section>
-				<h2>Herramientas</h2>
-				<ul>
-					{tools.map((tool) => <li>{tool}</li>)}
-				</ul>
-			</section>
-
-			<section>
-				<h2>Idiomas</h2>
-				<ul>
-					{languages.map((lang) => <li>{lang}</li>)}
-				</ul>
-			</section>
-
-
+			<SectionList title="Proyectos Universitarios" items={universityProjects} />
+			<SectionList title="Proyectos Personales" items={personalProjects} />
+			<SectionList title="Experiencia Relevante" items={relevantExperience} />
+			<SectionList title="Tech Stack" items={techStack} />
+			<SectionList title="Herramientas" items={tools} />
+			<SectionList title="Idiomas" items={languages} />
 		</main>
 
 		<footer>
