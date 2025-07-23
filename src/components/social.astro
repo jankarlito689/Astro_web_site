@@ -1,5 +1,46 @@
 ---
-const {platform, username } = Astro.props;
----
+//iconos import
+import {Icon} from 'astro-icon/components';
 
-<a href={`https://www.${platform}.com/in/${username}`}>{platform}</a>
+//interface for propitis for componte
+interface Props{
+    platform: "Github" | "LinkedIn" | "Email";
+    username: string;
+}
+
+const {platform, username } = Astro.props;  
+
+//logi the icon and url
+let iconName = "";
+let Link = "";
+
+switch(platform){
+    case "Github":
+        iconName = "github_ligh";
+        Link = `https://github.com/${username}`;
+    break;
+
+    case "LinkedIn":
+        iconName = "linkedin";
+        Link = `https://www.linkedin.com/in/${username}`;
+    break;
+
+    case "Email":
+        iconName = "gmail";
+        Link = `mailto:${username}`;
+    break;
+
+    default:
+        console.warn(`Platform '${platform}' not recognized.`);
+        iconName = ""
+        Link = "#";
+
+}
+
+---
+{iconName && (
+    <a href={Link} target="_blank" rel="">
+        <Icon name={iconName} />
+    </a>
+)}
+
