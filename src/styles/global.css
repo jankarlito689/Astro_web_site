@@ -7,7 +7,7 @@
     padding: 0;
 }
 
-/* Tipografía base y fondo */
+/* Base: tipografía, fondo, colores */
 html {
     font-family: 'Inter', system-ui, sans-serif;
     font-size: 16px;
@@ -18,56 +18,63 @@ html {
 }
 
 body {
-    margin: 0;
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.7;
-    min-height: 100%;
     display: flex;
     flex-direction: column;
+    min-height: 100dvh;
+    padding: 0 2rem;
+    line-height: 1.75;
+    max-width: 1200px;
+    margin-inline: auto;
 }
 
-html, body{
-    height: 100%;
-}
-/* Secciones con espacio */
-section {
-    margin-bottom: 4rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #ccc;
+main {
+    flex-grow: 1;
 }
 
-/* Encabezados */
+/* Layout general */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+/* Tipografía responsiva con clamp */
 h1, h2, h3 {
     font-weight: 600;
     color: #3C3D37;
+    line-height: 1.2;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 5vw, 3rem);
     margin-bottom: 1.5rem;
 }
 
 h2 {
-    font-size: 2rem;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: clamp(1.75rem, 4vw, 2rem);
+    margin-top: 3rem;
+    margin-bottom: 1.25rem;
     color: #181C14;
 }
 
 h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    margin-bottom: 1rem;
     color: #697565;
 }
 
-/* Párrafos */
 p {
     font-size: 1.125rem;
     margin-bottom: 1.5rem;
     color: #3C3D37;
+}
+
+/* Secciones */
+section {
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
 }
 
 /* Listas */
@@ -84,38 +91,70 @@ li {
 /* Enlaces */
 a {
     color: #697565;
-    text-decoration: underline;
-    transition: color 0.3s;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    left: 0;
+    bottom: -2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 a:hover {
     color: #181C14;
 }
 
-/* Responsividad */
+a:focus-visible {
+    outline: 2px dashed #697565;
+    outline-offset: 4px;
+}
+
+/* Íconos sociales */
+.icon-link {
+    display: inline-block;
+    margin-right: 0.75rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.85;
+}
+
+.icon-link:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* Responsividad global */
 @media (max-width: 768px) {
-body {
-    padding: 2rem 1rem;
-}
+    body {
+        padding: 2rem 1rem 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100dvh;
+    }
 
-h1 {
-    font-size: 2.25rem;
-}
+    main {
+        flex-grow: 1;
+    }
 
-h2 {
-    font-size: 1.5rem;
-}
-
-h3 {
-    font-size: 1.25rem;
-}
-
-p {
-    font-size: 1rem;
-}
-
-section {
+    section {
         margin-bottom: 2.5rem;
         padding-bottom: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
     }
 }
