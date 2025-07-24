@@ -1,6 +1,7 @@
 ---
 //iconos import
 import {Icon} from 'astro-icon/components';
+import "../styles/footer.css";
 
 //interface for propitis for componte
 interface Props{
@@ -39,7 +40,7 @@ switch(platform){
 
 ---
 {iconName && (
-    <a href={Link} target="_blank" rel="">
+    <a href={Link} target="_blank" rel="" class="icon-link">
         <Icon name={iconName} />
     </a>
 )}
