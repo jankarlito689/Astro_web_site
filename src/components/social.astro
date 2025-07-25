@@ -5,11 +5,11 @@ import "../styles/footer.css";
 
 //interface for propitis for componte
 interface Props{
-    platform: "Github" | "LinkedIn" | "Email";
+    platform: "Github" | "LinkedIn" | "Email" | "Whatsapp";
     username: string;
 }
 
-const {platform, username } = Astro.props;  
+const {platform, username} = Astro.props;  
 
 //logi the icon and url
 let iconName = "";
@@ -26,6 +26,11 @@ switch(platform){
         Link = `https://www.linkedin.com/in/${username}`;
     break;
 
+    case "Whatsapp":
+        iconName = "whatsapp";
+        Link = `https://wa.me/${username}`;
+    break;
+
     case "Email":
         iconName = "gmail";
         Link = `mailto:${username}`;
@@ -40,7 +45,13 @@ switch(platform){
 
 ---
 {iconName && (
-    <a href={Link} target="_blank" rel="" class="icon-link">
+    <a href={Link} 
+        target="_blank" 
+        rel="" 
+        class:list= {{
+            'icon-link': true,
+            'whatsapp-float': iconName === 'whatsapp'
+        }}>
         <Icon name={iconName} />
     </a>
 )}
