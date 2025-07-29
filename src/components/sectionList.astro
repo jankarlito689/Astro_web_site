@@ -1,0 +1,16 @@
+---
+//interface list section
+interface Props{
+    title: string;
+    items: string[];
+}
+
+const {title, items} = Astro.props;
+---
+
+<section>
+    <h2>{title}</h2>
+    <ul>
+        {items.map((item) => <li>{item}</li>)}
+    </ul>
+</section>
