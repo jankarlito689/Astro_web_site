@@ -1,0 +1,29 @@
+---
+//interface the props of links
+interface LinkItem{
+    label: string;
+    url: string;
+}
+
+//interface the general props
+interface Props {
+    title: string;
+    text?: string;
+    links: LinkItem[];
+}
+
+const {title, text, links} = Astro.props
+---
+
+<section>
+    <h3>{title}</h3>
+    {text && <p>{text}</p>}
+
+    <ul>
+        {links.map((link) => (
+            <li>
+                <a href={link.url} target="_blank" rel="">{link.label}</a>
+            </li>
+    ))}
+    </ul>
+</section>
