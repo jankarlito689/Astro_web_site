@@ -1,6 +1,7 @@
 ---
 import Footer from '../components/footer.astro';
 import Header from '../components/header.astro';
+import SectionLinks from '../components/sectionLinks.astro';
 import '../styles/global.css';
 import '../styles/navigation.css';
 
@@ -16,6 +17,24 @@ const textPost_1 = "Explico un poco el uso de Supabase y cuento mi experiencia t
 //informacion post-2
 const titlePost_2 = "Cómo uso IA en mis proyectos";
 const textPost_2 = "Explico un poco el uso de la IA y cuento mi experiencia trabajando con élla.";
+
+//Arry the sections
+const secciones = [
+{
+	title: titlePost_1,
+	text: textPost_1,
+	links: [
+		{label: "Uso de Supabase", url:"/posts/post-1"}
+	]
+},
+{
+	title: titlePost_2,
+	text: textPost_2,
+	links: [
+		{label: "Uso de la IA", url:"/posts/post-2"}
+	]
+}
+];
 ---
 <html lang="en">
 	<head>
@@ -29,21 +48,10 @@ const textPost_2 = "Explico un poco el uso de la IA y cuento mi experiencia trab
 		<Header />
 		<h1>{pageTitle}</h1>
 			<h2>{descPage}</h2>
-
-		<section>
-			<h3>{titlePost_1}</h3>
-			<p>{textPost_1}</p>
-			<ul>
-				<li><a href="/posts/post-1">Uso de Supabase</a></li>
-			</ul>
-		</section>
-		<section>
-			<h3>{titlePost_2}</h3>
-			<p>{textPost_2}</p>
-			<ul>
-				<li><a href="/posts/post-2">Uso de la IA</a></li>
-			</ul>
-		</section>
+			
+		{secciones.map((section) => (
+			<SectionLinks title={section.title} text={section.text} links={section.links} />
+		))}
 		<footer>
 			<Footer />
 		</footer>
