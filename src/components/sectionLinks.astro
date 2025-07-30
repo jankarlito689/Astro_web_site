@@ -1,4 +1,7 @@
 ---
+//imports
+import "../styles/sectionLinks.css"
+
 //interface the props of links
 interface LinkItem{
     label: string;
@@ -15,7 +18,7 @@ interface Props {
 const {title, text, links} = Astro.props
 ---
 
-<section>
+<section class="section-links">
     <h3>{title}</h3>
     {text && <p>{text}</p>}
 

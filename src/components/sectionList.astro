@@ -1,4 +1,7 @@
 ---
+//imports
+import "../styles/sectionList.css"
+
 //interface list section
 interface Props{
     title: string;
@@ -8,7 +11,7 @@ interface Props{
 const {title, items} = Astro.props;
 ---
 
-<section>
+<section class="section-list">
     <h2>{title}</h2>
     <ul>
         {items.map((item) => <li>{item}</li>)}
