@@ -1,0 +1,33 @@
+---
+import Footer from '../components/footer.astro';
+import Header from '../components/header.astro';
+import SectionLinks from '../components/sectionLinks.astro';
+import '../styles/global.css';
+import '../styles/navigation.css';
+import { pageTitle, pageBlog, descPage, secciones } from '../data/dataProyect';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageBlog}</title>
+	</head>
+	<body>
+		<Header />
+		<h1>{pageTitle}</h1>
+			<h2>{descPage}</h2>
+
+		{secciones.map((section) => (
+			<SectionLinks title={section.title} text={section.text} links={section.links} />
+		))}
+		<footer>
+			<Footer />
+		</footer>
+		<script>
+			import '../scripts/menu';
+		</script>
+	</body>
+</html>
