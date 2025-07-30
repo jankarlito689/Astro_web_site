@@ -4,6 +4,8 @@ import '../styles/navigation.css';
 import Header from '../components/header.astro';
 import Footer from '../components/footer.astro';
 import Contacto from '../components/contacto.astro';
+import SectionLinks from '../components/sectionLinks.astro';
+import { pageNameTitle, pageBlog, descPage , secciones, titleContact, textContact} from '../data/dataBase';
 ---
 <html lang="en">
 	<head>
@@ -11,36 +13,24 @@ import Contacto from '../components/contacto.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Blog Dev</title>
+		<title>{pageBlog}</title>
 	</head>
 	<body>
 		<Header />
 		<section>
-			<h1>Hola, soy César Leos</h1>
+			<h1>{pageNameTitle}</h1>
 				<p>
-					Estudiante de Ingeniería en Computación desde Guadalajara, México. Me apasiona la programación (especialmente C++), el software libre, la inteligencia artificial y los temas académicos como la literatura y la historia. Este es mi espacio personal donde comparto lo que aprendo.
+					{descPage}
 				</p>
 		</section>
-
+		{secciones.map((section) => (
+			<SectionLinks title={section.title} text={section.text} links={section.links} />
+		))}
 		<section>
-			<h2>Blog</h2>
+			<h2>{titleContact}</h2>
 				<p>
-					Comparto artículos sobre desarrollo, errores comunes que he resuelto, tutoriales con Supabase, Express y herramientas que uso en mis proyectos personales.  
+					{textContact}
 				</p>
-				<a href="/blog">Leer publicaciones →</a>
-		</section>
-
-		<section>
-			<h2>Proyectos</h2>
-				<p>
-					Aquí muestro algunos proyectos personales en los que he trabajado: APIs, herramientas con enfoque en privacidad, bots y más.
-				</p>
-				<a href="/proyectos">Ver proyectos →</a>
-		</section>
-
-		<section>
-			<h2>Contacto</h2>
-				<p>¿Quieres contactarme? Puedes escribirme por correo o seguirme en GitHub.</p>
 					<Contacto />
 		</section>
 		<footer>
