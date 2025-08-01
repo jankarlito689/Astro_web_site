@@ -36,7 +36,7 @@ El objetivo del sitio es tener un espacio limpio, minimalista y funcional para m
 │   └── styles/          # Archivos CSS
 ├── astro.config.mjs     # Configuración de Astro
 ├── package.json         # Dependencias y scripts
-
+``
 ---
 
 ## 🛠️ En desarrollo
