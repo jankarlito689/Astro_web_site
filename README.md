@@ -36,31 +36,26 @@ El objetivo del sitio es tener un espacio limpio, minimalista y funcional para m
 │   └── styles/          # Archivos CSS
 ├── astro.config.mjs     # Configuración de Astro
 ├── package.json         # Dependencias y scripts
-
----
-
+```
 ## 🛠️ En desarrollo
 
--Página "Sobre mí"
-
--Página de contacto con formulario
-
--Sección de proyectos destacados
-
--Temas oscuros y claros
+- Página **"Sobre mí"**
+- Página de **contacto** con formulario
+- Sección de **proyectos destacados**
+- Soporte para **tema oscuro y claro**
 
 ---
 
-🤝 Contribuciones
+## 🤝 Contribuciones
 
-Si deseas aportar ideas o sugerencias, eres bienvenido.
-También puedes abrir un issue o enviar un pull request si tienes alguna mejora concreta.
+Si deseas aportar ideas o sugerencias, eres bienvenido.  
+También puedes abrir un **issue** o enviar un **pull request** si tienes alguna mejora concreta.
 
 ---
 
-📄 Licencia
+## 📄 Licencia
 
-MIT © 2025 César Leos
+MIT © 2025 **César Leos**  
 Hecho con pasión por el código y la curiosidad 🌌
 
 ---
