@@ -1,47 +1,58 @@
-# Astro Starter Kit: Minimal
+# 🧑‍💻 Mi Blog Dev – Sitio Personal de Desarrollo
 
-```sh
-npm create astro@latest -- --template minimal
-```
+[🌐 Visita el sitio](https://miblogdev.netlify.app/)  
+Desarrollado con [Astro](https://astro.build), desplegado en [Netlify](https://www.netlify.com/)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 📚 Descripción
 
-## 🚀 Project Structure
+Este es mi blog personal donde comparto artículos, recursos y proyectos relacionados con el desarrollo de software.  
+Fue creado usando **Astro**, un framework moderno y rápido para construir sitios estáticos y de contenido.
 
-Inside of your Astro project, you'll see the following folders and files:
+El objetivo del sitio es tener un espacio limpio, minimalista y funcional para mostrar mis conocimientos, experiencias y avances como desarrollador.
+
+---
+
+## 🧰 Tecnologías utilizadas
+
+- ⚡ [Astro](https://astro.build)
+- 🎨 HTML, CSS, JavaScript
+- 🧩 Markdown para las entradas del blog
+- ☁️ [Netlify](https://www.netlify.com/) para despliegue continuo
+- 📱 Diseño responsivo y optimizado para móviles
+
+---
+
+## 🚀 Estructura del proyecto
 
 ```text
 /
-├── public/
+├── public/              # Archivos estáticos (imágenes, íconos, etc.)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+│   ├── components/      # Componentes reutilizables
+│   ├── layouts/         # Estructura general de las páginas
+│   ├── pages/           # Rutas y contenido del sitio
+│   └── styles/          # Archivos CSS
+├── astro.config.mjs     # Configuración de Astro
+├── package.json         # Dependencias y scripts
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🛠️ En desarrollo
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+    Página "Sobre mí"
 
-Any static assets, like images, can be placed in the `public/` directory.
+    Página de contacto con formulario
 
-## 🧞 Commands
+    Sección de proyectos destacados
 
-All commands are run from the root of the project, from a terminal:
+    Temas oscuros y claros
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+🤝 Contribuciones
 
-## 👀 Want to learn more?
+Si deseas aportar ideas o sugerencias, eres bienvenido.
+También puedes abrir un issue o enviar un pull request si tienes alguna mejora concreta.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+📄 Licencia
+
+MIT © 2025 César Leos
+Hecho con pasión por el código y la curiosidad 🌌
