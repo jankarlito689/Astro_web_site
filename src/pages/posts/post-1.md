@@ -1,14 +1,11 @@
 ---
+layout: ../../layouts/post/Post-1Layout.astro
 title: "Cómo uso Supabase en mis proyectos"
 pubDate: 2025-07-02
 description: "En esta publicación explico cómo integro Supabase en mis proyectos como alternativa moderna a Firebase."
 author: "Cesar Leos"
 tags: ["supabase", "backend", "javascript", "typescript", "api", "auth"]
 ---
-
-# Cómo uso Supabase en mis proyectos
-
-Publicado el: 2025-07-02
 
 Bienvenido a mi primer post del blog, donde quiero contarte cómo utilizo [Supabase](https://supabase.com) como backend en varios de mis proyectos personales y profesionales. Supabase es una alternativa de código abierto a Firebase, y me ha facilitado mucho el desarrollo de APIs, autenticación, y manejo de bases de datos.
 
@@ -51,5 +48,3 @@ Estas son algunas razones por las que lo elegí:
 - Autenticación en dashboards administrativos
 - Almacenamiento de imágenes de usuario
 - Consultas en tiempo real con supabase.realtime
-
-## Lo que viene
