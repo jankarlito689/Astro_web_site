@@ -1,0 +1,9 @@
+---
+//Props de frontmatter
+const { frontmatter } = Astro.props;
+---
+<!-- Cuerpo del post-1 -->>
+<h1>{frontmatter.title}</h1>
+<p>{frontmatter.pubDate}</p>
+<p>{frontmatter.description}</p>
+<p>Escrito por: {frontmatter.author}</p>
