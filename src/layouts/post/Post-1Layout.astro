@@ -2,8 +2,26 @@
 //Props de frontmatter
 const { frontmatter } = Astro.props;
 ---
-<!-- Cuerpo del post-1 -->>
-<h1>{frontmatter.title}</h1>
-<p>{frontmatter.pubDate}</p>
-<p>{frontmatter.description}</p>
-<p>Escrito por: {frontmatter.author}</p>
+<!-- Cuerpo del layout post-1 -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{frontmatter.title}</title>
+        <meta name="description" content={frontmatter.description} />
+    </head>
+    <body>
+        <main>
+            <article>
+                <header>
+                    <h1>{frontmatter.title}</h1>
+                    <p>Publicado el: {frontmatter.pubDate.toString().slice(0,10)}</p>
+                    <p>{frontmatter.description}</p>
+                    <p>Escrito por: {frontmatter.author}</p>    
+                </header>
+                <section>
+                    <slot />
+                </section>
+            </article>
+        </main>
+    </body>
+</html>
