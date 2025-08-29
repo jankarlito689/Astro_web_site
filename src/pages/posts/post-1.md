@@ -3,9 +3,6 @@ title: "Cómo uso Supabase en mis proyectos"
 pubDate: 2025-07-02
 description: "En esta publicación explico cómo integro Supabase en mis proyectos como alternativa moderna a Firebase."
 author: "Cesar Leos"
-image:
-  url: "https://supabase.com/_next/image?url=%2Fimages%2Fmarketing%2Fsupabase-og-image.png&w=1200&q=75"
-  alt: "Logo de Supabase sobre fondo oscuro"
 tags: ["supabase", "backend", "javascript", "typescript", "api", "auth"]
 ---
 
