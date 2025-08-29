@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/post/Post-1Layout.astro
+layout: ../../layouts/post/PostLayout.astro
 title: "Cómo uso Supabase en mis proyectos"
 pubDate: 2025-07-02
 description: "En esta publicación explico cómo integro Supabase en mis proyectos como alternativa moderna a Firebase."
