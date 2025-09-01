@@ -27,20 +27,23 @@ Estas son algunas razones por las que lo elegí:
    ```bash
    npm install @supabase/supabase-js
 
-3. **Inicializo el cliente**: 
+3. **Inicializo el cliente**:
+    ```bash
     import { createClient } from '@supabase/supabase-js'
     const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
 4. **Uso de Auth: Por ejemplo, para registrar un usuario**:
+    ```bash
     const { user, error } = await supabase.auth.signUp({
-  email: 'usuario@example.com',
-  password: 'secreto123'
-})
+    email: 'usuario@example.com',
+    password: 'secreto123'
+    })
 
 5. **Manejo de datos: Para insertar datos**:
+    ```bash
     const { data, error } = await supabase
-  .from('usuarios')
-  .insert([{ nombre: 'Juan', edad: 25 }])
+    .from('usuarios')
+    .insert([{ nombre: 'Juan', edad: 25 }])
 
 ## Casos de uso
 

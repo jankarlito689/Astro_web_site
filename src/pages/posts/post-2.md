@@ -1,11 +1,9 @@
 ---
+layout: ../../layouts/post/PostLayout.astro
 title: "Cómo uso la IA como desarrollador de software"
 pubDate: 2025-07-02
 description: "Consejos y reflexiones sobre el uso de herramientas como ChatGPT y Claude para mejorar el desarrollo de software."
 author: "Cesar Leos"
-image:
-  url: "https://cdn.openai.com/chatgpt/marketing/og-chatgpt.png"
-  alt: "Ilustración abstracta de una IA trabajando junto a un desarrollador"
 tags: ["inteligencia artificial", "AI", "software", "productividad", "buenas prácticas", "desarrollo"]
 ---
 
