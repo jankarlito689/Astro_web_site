@@ -2,73 +2,120 @@
 
 /*Contenedor del post */
 .post-container {
-    max-width: 80rem;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    margin-inline: auto;
+    padding: 2rem 1.25rem;
+    background: transparent;
+    box-sizing: border-box;
 }
 /*Encabezado del post */
 .post-header {
     border-bottom: 1px solid #ECDFCC;
-    padding-bottom: 2rem;
-    margin-bottom: 1rem;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
 }
 .post-header h1{
-    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-size: clamp(1.6rem, 6vw, 2.4rem);/*Override de h1 global para que el h1 post tenga su propio escala*/
+    line-height: 1.08;
     color: #181C14;
-    margin-bottom: 0.5rem;
+    margin: 0 0 0.6rem 0;
 }
+/*Meta información del post (fecha, autor, descripción)*/
 .post-meta{
     font-size: 1rem;
     color: #697565;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
 }
-
-/*Contenido del post */
+.post-meta p,
+.post-meta span {
+    margin: 0;
+}
+/*Contenido principal*/
+.post-content {
+    font-size: 1.05rem;
+    color: #3C3D37;
+    line-height: 1.75;
+}
+/*Encabezados del contenido principal*/
 .post-content h2 {
-    font-size: clamp(1.5rem, 4vw, 2rem);
     color: #181C14;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: .75rem;
+    font-size: clamp(1.25rem, 4vw, 1.9rem);
 }
 .post-content h3 {
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
     color: #697565;
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
+    margin-bottom: .5rem;
 }
+/* Parrafos y Listas */
 .post-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+.post-content ul,
+.post-content ol {
+    margin: 0.75rem 0 1.5rem 1.5rem;
+    padding: 0;
+}
+/* Bloques de código */
+.post-content pre {
+    background: #181C14;
+    color: #ECDFCC;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: "Fira Code", monospace;
+    font-size: 0.92rem;
     margin: 1rem 0;
+    line-height: 1.4;
+    white-space: pre-wrap; /* Permitir que el código se ajuste al ancho del contenedor */
+    word-break: break-word;/*Palabras largas se rompen en líneas nuevas*/
 }
-/*Lista de contenido */
-.post-content ul {
-    margin: 1rem 0;
-    padding-left: 1.5rem;
-}
-.post-content li{
-    margin: 0.5rem 0;
-}
-/*links */
+/* Links */
 .post-content a {
     color: #697565;
-    font-weight: 500;
     text-decoration: underline;
-    text-decoration-color: #ECDFCC;
     text-underline-offset: 3px;
-    transition: all 0.2s ease-in-out;
 }
 .post-content a:hover {
     color: #181C14;
-    text-decoration-color: #697565;
 }
-
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .post-container {
-        padding: 1.5rem;
+    /*Reducir padding y tamaño de fuente en móviles*/
+    body{
+        padding: 1.25rem 1rem 0;
     }
-    .post-header h1 {
-        font-size: 2rem;
+    .post-container {
+        padding: 1rem 0.75rem;
+        max-width: 100%;
+    }
+    /*H1 mas compacto para movil*/
+    .post-header h1{
+        font-size: clamp(1.4rem, 8vw, 1.9rem);
+        margin-bottom: 0.4rem;
+    }
+    .post-meta{
+        font-size: 0.85rem;
+        gap: 0.45rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .post-content {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    .post-content pre{
+        font-size: 0.83rem;
+        padding: 0.65rem 0.75rem;
+    }
+    /* Espacio inferior de footer */
+    main{
+        margin-bottom: 1.5rem;
     }
 }
