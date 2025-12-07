@@ -2,14 +2,8 @@
 layout: ../../layouts/post/PostLayout.astro
 title: "Cómo uso la IA como desarrollador de software"
 pubDate: 2025-07-02
-description: "Consejos y reflexiones sobre el uso de herramientas como ChatGPT y Claude para mejorar el desarrollo de software."
 author: "Cesar Leos"
-tags: ["inteligencia artificial", "AI", "software", "productividad", "buenas prácticas", "desarrollo"]
 ---
-
-# Cómo uso la IA como desarrollador de software
-
-Publicado el: 2025-07-02
 
 Desde hace tiempo uso inteligencia artificial como parte de mi flujo de trabajo. No dependo de muchas herramientas; de hecho, me enfoco principalmente en **ChatGPT** y **Claude**, dos asistentes conversacionales que me ayudan a pensar, resolver problemas y mejorar mi código.
 
