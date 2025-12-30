@@ -1,11 +1,11 @@
 ---
+// src/layouts/ProyectLayuot.astro
 import Footer from '../components/footer.astro';
 import Header from '../components/header.astro';
 import SectionLinks from '../components/sectionLinks.astro';
-import { pageTitle, pageBlog, descPage, secciones } from '../data/dataProyect';
+import { pageTitle, pageBlog, descPage, projects } from '../data/proyectos/Proyects';
 import '../styles/global.css';
 ---
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -19,9 +19,18 @@ import '../styles/global.css';
 		<h1>{pageTitle}</h1>
 			<h2>{descPage}</h2>
 
-		{secciones.map((section) => (
-			<SectionLinks title={section.title} text={section.text} links={section.links} />
-		))}
+		{projects.map((project) => {
+			const linksWithSlug = [
+				...project.links,
+				{
+					label: "Saber mas",
+					url: `/proyectos/${project.slug}`
+				},
+			];
+			return(
+				<SectionLinks title={project.title} text={project.summary} links={linksWithSlug} />
+			)
+		})}
 		<footer>
 			<Footer />
 		</footer>
