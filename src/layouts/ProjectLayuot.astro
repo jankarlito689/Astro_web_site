@@ -1,0 +1,41 @@
+---
+// src/layouts/ProyectLayuot.astro
+import Footer from '../components/footer.astro';
+import Header from '../components/header.astro';
+import SectionLinks from '../components/sectionLinks.astro';
+import { pageTitle, pageBlog, descPage, projects } from '../data/proyectos/Projects';
+import '../styles/global.css';
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageBlog}</title>
+	</head>
+	<body>
+		<Header />
+		<h1>{pageTitle}</h1>
+			<h2>{descPage}</h2>
+
+		{projects.map((project) => {
+			const linksWithSlug = [
+				...project.links,
+				{
+					label: "Saber mas",
+					url: `/proyectos/${project.slug}`
+				},
+			];
+			return(
+				<SectionLinks title={project.title} text={project.summary} links={linksWithSlug} />
+			)
+		})}
+		<footer>
+			<Footer />
+		</footer>
+		<script>
+			import '../scripts/menu';
+		</script>
+	</body>
+</html>
