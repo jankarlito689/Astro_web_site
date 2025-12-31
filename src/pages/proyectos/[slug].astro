@@ -1,0 +1,75 @@
+---
+//src/pages/proyectos/[slug].astro
+import { proyectDetails } from "../../data/proyectos/ProjectDetail";
+import Header from "../../components/header.astro";
+import Footer from "../../components/footer.astro";
+import "../../styles/global.css";
+import "../../styles/proyectos/projectDetail.css";
+
+export async function getStaticPaths(){
+    return proyectDetails.map((project) => ({
+        params: { slug: project.slug},
+    }));
+}
+const { slug } = Astro.params;
+
+// Find the project detail based on the slug
+const project = proyectDetails.find(
+    (p) => p.slug === slug
+);
+
+if (!project){
+    throw new Error(`Project with slug "${slug}" not found.`);
+}
+---
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="generator" content={Astro.generator} />
+        <title>{project.title}</title>
+    </head>
+        <Header/>
+    <body>
+        <main class="project-detail">
+            <div class="project-detail__content">
+                <h1 class="project-detail__title">
+                    {project.title}
+                </h1>
+                <p class="project-detail__description">
+                    {project.description}
+                </p>
+                <div class="project-detail__section">
+                    <section>
+                        <h2>Objetivo</h2>
+                        <p>{project.objective}</p>
+                    </section>
+                    <section>
+                        <h2>Tecnologias</h2>
+                        <ul class="project-detail__list">
+                            {project.technologies.map((tech) =>(
+                                <li>{tech}</li>
+                            ))}
+                        </ul>
+                    </section>
+                </div>
+                {project.learnings && (
+                    <section>
+                        <h2>Aprendizajes</h2>
+                        <ul>
+                            {project.learnings.map((learning) => (
+                                <li>{learning}</li>
+                            ))}
+                        </ul>
+                    </section>
+                )}
+            </div>
+        </main>
+        <footer>
+			<Footer />
+		</footer>
+        <script>
+			import '../../scripts/menu';
+		</script>
+    </body>
+</html>
