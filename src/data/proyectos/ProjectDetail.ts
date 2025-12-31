@@ -19,9 +19,9 @@ export const proyectDetails: ProjectDetail[] = [
     {
         slug: "reproductor-musica-cpp",
         title: "Reproductor de música en C++",
-        description: "Aplicación de terminal desarrollada en C++ que permite reproducir música desde una interfaz en consola.",
-        objective: "Integrar estructuras de datos con librerías externas para crear una aplicación funcional.",
-        technologies: ["HTML", "CSS", "GitHub"],
+        description: "Aplicación de terminal desarrollada en C++ que permite reproducir música desde una interfaz en consola. La aplicación es capaz de cargar playlist desde un archivo .txt, ademas de poder agregar canciones a la playlist, ademas en la termianal se muestra una interfaz con controles para reproducir, pausar,saltar,canciones.buscar canciones, eliminar adeams de controlar el orden de reproduccion y una pequeña barra de progreso.",
+        objective: "Integrar estructuras de datos(lista doblemente enlazadas) con librerías externas para crear una aplicación funcional.",
+        technologies: ["C++", "sfml"],
         learnings:[
             "Listas doblemente enlazadas",
             "Uso de la librería SFML",
@@ -32,9 +32,9 @@ export const proyectDetails: ProjectDetail[] = [
     {
         slug: "sistema-bibliotecario-cpp",
         title: "Sistema bibliotecario en C++",
-        description: "Aplicación de terminal desarrollada en C++ que permite reproducir música desde una interfaz en consola.",
-        objective: "Integrar estructuras de datos con librerías externas para crear una aplicación funcional.",
-        technologies: ["HTML", "CSS", "GitHub"],
+        description: "Aplicación de terminal desarrollada en C++ como parte de un proyecto final universitario pará la materia de Programación Orientada a Objetos. La aplicación permite gestionar un sistema bibliotecario, incluyendo funcionalidades para agregar, eliminar y buscar libros, así como gestionar usuarios y préstamos.",
+        objective: "El principal abjettivo del proyecto es aplicar los conceptos de Programación Orientada a Objetos (POO) en C++ para desarrollar una aplicación funcional y modular. en la aplicación se utilizan clases para representar entidades como libros, usuarios y préstamos, implementando principios de encapsulación, herencia y polimorfismo. ademas de archivos Header y cpp para una mejor organzació de los archivos del proyecto.",
+        technologies: ["C++"],
         learnings:[
             "Listas doblemente enlazadas",
             "Uso de la librería SFML",
@@ -46,9 +46,9 @@ export const proyectDetails: ProjectDetail[] = [
         slug: "algoritmos-grafos-python",
         title: "Algoritmos de grafos en Python",
         description:
-            "Proyecto universitario donde se implementan algoritmos de búsqueda y grafos para encontrar rutas óptimas dentro de una ciudad.",
+            "Proyecto universitario donde se implementan algoritmos de búsqueda y grafos para viajar por los diferentes estados de Mexico. La aplicación cuenta con una interfaz gráfica desarrollada con Tkinter que permite a los usuarios visualizar y navegar por el grafo de estados. y seleccionar dulces tipos de la region que desean visitar.",
         objective:
-            "Comprender el funcionamiento de los grafos y su aplicación en problemas reales.",
+            "Comprender el funcionamiento de los grafos y su aplicación en problemas reales. ademas de aprender a desarrollar interface graficas con Tkinter.",
         technologies: ["Python", "Tkinter"],
         learnings: [
             "Algoritmos de grafos",
