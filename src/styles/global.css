@@ -6,14 +6,28 @@
     margin: 0;
     padding: 0;
 }
+/* Variables del diseño */
+:root{
+    --bg-main: #ECDFCC;
+    --text-main: #3C3D37;
+    --text-strong: #181C14;
+    --text-muted: #697565;
 
+    --surface: rgba(255, 255, 255, 0.45);
+    --border-soft: rgba(0, 0, 0, 0.08);
+
+    --radius-sm: 5px;
+    --radius-md: 10px;
+
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
 /* Base: tipografía, fondo, colores */
 html {
     font-family: 'Inter', system-ui, sans-serif;
     font-size: 16px;
     scroll-behavior: smooth;
-    background-color: #ECDFCC; /* crema claro */
-    color: #3C3D37;
+    background-color: var(--bg-main); /* crema claro */
+    color: var(--text-main);
     height: 100%;
 }
 
@@ -25,6 +39,8 @@ body {
     line-height: 1.75;
     max-width: 1200px;
     margin-inline: auto;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 main {
@@ -38,38 +54,63 @@ main {
     margin-inline: auto;
     padding-inline: 1rem;
 }
-
+section{
+    margin-bottom: 4rem;
+}
 /* Tipografía responsiva con clamp */
 h1, h2, h3 {
     font-weight: 600;
-    color: #3C3D37;
+    letter-spacing: -0.015em;
     line-height: 1.2;
 }
 
 h1 {
     font-size: clamp(2.5rem, 5vw, 3rem);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
+    color: var(var--text-strong);
 }
 
 h2 {
     font-size: clamp(1.75rem, 4vw, 2rem);
     margin-top: 3rem;
     margin-bottom: 1.25rem;
-    color: #181C14;
+    color: var(--text-strong);
 }
 
 h3 {
     font-size: clamp(1.25rem, 3vw, 1.5rem);
     margin-bottom: 1rem;
-    color: #697565;
+    color: var(--text-muted);
 }
 
 p {
     font-size: 1.125rem;
     margin-bottom: 1.5rem;
-    color: #3C3D37;
+    color: var(--text-main);
 }
 
+::selection{
+    background-color: rgba(105, 117, 101, 0.25);
+}
+
+a{
+    color: inherit;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    transition: opacity 0.2s ease;
+}
+
+a:hover{
+    opacity: 0.75;
+}
+/* Estilos para elementos con clase "surface" */
+.surface {
+    background: var(--surface);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    padding: 1rem;
+}
 /* Responsividad global */
 @media (max-width: 768px) {
     body {
