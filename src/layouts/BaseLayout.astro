@@ -1,0 +1,48 @@
+---
+import '../styles/global.css';
+import '../styles/layouts/BaseLayout.css'
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Contacto from '../components/contacto.astro';
+import SectionLinks from '../components/sectionLinks.astro';
+import { pageNameTitle, pageBlog, descPage , secciones, titleContact, textContact} from '../data/dataBase';
+---
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageBlog}</title>
+	</head>
+	<body>
+		<Header />
+		<main class="layout">
+			<section class="hero">
+				<h1>{pageNameTitle}</h1>
+					<p>
+						{descPage}
+					</p>
+			</section>
+			<section class="content">
+				{secciones.map((section) => (
+					<SectionLinks 
+						title={section.title} 
+						text={section.text} 
+						links={section.links} 
+					/>
+				))}
+			</section>
+			<section class="contact surface">
+				<h2>{titleContact}</h2>
+					<p>
+						{textContact}
+					</p>
+						<Contacto />
+			</section>
+		</main>
+			<Footer />
+		<script>
+			import '../scripts/menu';
+		</script>
+	</body>
+</html>
