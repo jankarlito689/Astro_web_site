@@ -1,3 +1,4 @@
+/* src/styles/global.css - Estilos globales para el blog*/
 /* Reset básico y box-sizing universal */
 *,
 *::before,
@@ -48,11 +49,12 @@ main {
 }
 
 /* Layout general */
-.container {
+.layout-container {
     width: 100%;
     max-width: 1200px;
     margin-inline: auto;
     padding-inline: 1rem;
+    background-color: var(--bg-main);
 }
 section{
     margin-bottom: 4rem;
@@ -67,7 +69,7 @@ h1, h2, h3 {
 h1 {
     font-size: clamp(2.5rem, 5vw, 3rem);
     margin-bottom: 1.75rem;
-    color: var(var--text-strong);
+    color: var(--text-strong);
 }
 
 h2 {
