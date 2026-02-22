@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/upgrade": "^0.6.2",
     "astro": "^5.16.8"
   },
   "devDependencies": {
