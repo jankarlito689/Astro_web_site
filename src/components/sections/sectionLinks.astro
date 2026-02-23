@@ -1,0 +1,27 @@
+---
+//imports
+import "../../styles/components/sectionLinks.css"
+import type { ProjectLink } from "../../interface/Projects";
+
+//interface the general props
+interface Props {
+    title: string;
+    text?: string;
+    links: ProjectLink[];
+}
+
+const {title, text, links} = Astro.props
+---
+
+<section class="section-links">
+    <h3>{title}</h3>
+    {text && <p>{text}</p>}
+
+    <ul>
+        {links.map((link) => (
+            <li>
+                <a href={link.url} rel="">{link.label}</a>
+            </li>
+    ))}
+    </ul>
+</section>
