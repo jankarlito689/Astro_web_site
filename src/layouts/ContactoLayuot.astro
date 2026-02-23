@@ -1,0 +1,37 @@
+---
+// contacto.astro
+import '../styles/global.css';
+import Footer from '../components/footer.astro';
+import Header from '../components/header.astro';
+import Contacto from '../components/contacto.astro';
+import { pageTitle, pageBlog, introText, pitchText, closingText } from '../data/dataContact';
+---
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{pageBlog}</title>
+    </head>
+    <body>
+    <Header />
+        <h1>{pageTitle}</h1>
+            <section>
+                <p>{introText}</p>
+                <p>{pitchText}</p>
+                <p>{closingText}</p>
+            </section>
+    <section>
+        <h2>¿Hablamos?</h2>
+        <Contacto />
+    </section>
+    <footer>
+        <Footer />
+    </footer>
+    <script>
+        import '../scripts/menu';
+    </script>
+</body>
+</html>
