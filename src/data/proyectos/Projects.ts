@@ -1,6 +1,5 @@
 //src/data/proyectos/Proyects.ts
-import type { ProjectSection } from "./types";
-
+import type { ProjectSection } from "../../interface/Projects";
 // Información general de la página proyectos 
 export const pageTitle = "Proyectos de desarrollo";
 export const pageBlog = "The developer legend";

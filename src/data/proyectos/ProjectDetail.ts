@@ -1,5 +1,5 @@
 //Información de cada proyecto src/data/proyectos/ProjectDetail.ts
-import type { ProjectDetail } from "./types";
+import type { ProjectDetail } from "../../interface/Projects";
 
 export const proyectDetails: ProjectDetail[] = [
     {
