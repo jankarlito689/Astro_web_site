@@ -1,6 +1,6 @@
 //información de la página
 export const pageNameTitle = "Hola, soy César Leos";
-export const pageBlog = "Blog Dev";
+export const pageBlog = "The developer legend";
 export const descPage = "Estudiante de Ingeniería en Computación desde Guadalajara, México. Me apasiona la programación (especialmente C++), el software libre, la inteligencia artificial y los temas académicos como la literatura y la historia. Este es mi espacio personal donde comparto lo que aprendo.";
 
 //Blog section

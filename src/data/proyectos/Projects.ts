@@ -3,7 +3,7 @@ import type { ProjectSection } from "./types";
 
 // Información general de la página proyectos 
 export const pageTitle = "Proyectos de desarrollo";
-export const pageBlog = "Blog Dev";
+export const pageBlog = "The developer legend";
 export const descPage = "Explora algunos de los proyectos que he desarrollado como parte de cursos, estudios universitarios y trabajo personal.";
 
 export const projects: ProjectSection[] = [

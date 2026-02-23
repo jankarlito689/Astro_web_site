@@ -1,6 +1,6 @@
 //Informacion sobre page
 export const pageTitle = "Blog del Dev";
-export const pageTitleBlog = "Blog Dev";
+export const pageTitleBlog = "The developer legend";
 export const descPage = "Post sobre mí como desarrollador, pasiones y cosas que me gustan";
 
 //informacion post-1

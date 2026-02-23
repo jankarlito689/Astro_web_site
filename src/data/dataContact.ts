@@ -1,6 +1,6 @@
 //información de la página
 export const pageTitle = "contacto";
-export const pageBlog = "Blog Dev";
+export const pageBlog = "The developer legend";
 
 export const introText = `
 Si estás buscando a alguien que combine habilidades técnicas con una visión clara del propósito de la tecnología, me encantaría hablar contigo. Creo en el desarrollo de herramientas que realmente aporten valor, respeten la privacidad de los usuarios y sean sostenibles a largo plazo.
