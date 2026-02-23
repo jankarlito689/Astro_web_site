@@ -1,5 +1,7 @@
 ---
+//src/layouts/AboutLayout.astro
 import '../styles/global.css';
+import '../styles/layouts/AboutLayout.css';
 import Footer from '../components/footer.astro';
 import Header from '../components/header.astro';
 import SectionList from '../components/sectionList.astro';
@@ -8,22 +10,46 @@ import { pageTitle, pageBlog, profile, universityProjects, personalProjects, rel
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<link 
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+			rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+			crossorigin="anonymous">
 		<title>{pageBlog}</title>
 	</head>
-	<body>
+	<body class="layout-container">
 		<Header />
-		<main>
-			<h1>{pageTitle}</h1>
-			<p>{profile}</p>
-			<SectionList title="Proyectos Universitarios" items={universityProjects} />
-			<SectionList title="Proyectos Personales" items={personalProjects} />
-			<SectionList title="Experiencia Relevante" items={relevantExperience} />
-			<SectionList title="Tech Stack" items={techStack} />
-			<SectionList title="Herramientas" items={tools} />
-			<SectionList title="Idiomas" items={languages} />
+		<main class="container py-5">
+			<div class="row justify-content-center">
+				<div class="col-lg-10">
+
+					<div class="surface p-5 mb-6 hero-surface">
+						<h1 class="mb-3">{pageTitle}</h1>
+						<p class="lead">{profile}</p>
+					</div>
+					<br />
+					<div class="surface mb-4">
+						<SectionList title="Proyectos Universitarios" items={universityProjects} />
+					</div>
+					<div class="surface mb-4">
+						<SectionList title="Proyectos Personales" items={personalProjects} />
+					</div>
+					<div class="surface mb-4">
+						<SectionList title="Experiencia Relevante" items={relevantExperience} />
+					</div>
+					<div class="surface mb-4">
+						<SectionList title="Tech Stack" items={techStack} />
+					</div>
+					<div class="surface mb-4">
+						<SectionList title="Herramientas" items={tools} />
+					</div>
+					<div class="surface mb-4">
+						<SectionList title="Idiomas" items={languages} />
+					</div>
+
+				</div>
+			</div>
 		</main>
 		<footer>
 			<Footer />
