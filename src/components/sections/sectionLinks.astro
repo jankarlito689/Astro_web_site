@@ -18,7 +18,7 @@ const {title, text, links} = Astro.props
     {text && <p>{text}</p>}
 
     <ul>
-        {links.map((link) => (
+        {links.map((link: ProjectLink) => (
             <li>
                 <a href={link.url} rel="">{link.label}</a>
             </li>
